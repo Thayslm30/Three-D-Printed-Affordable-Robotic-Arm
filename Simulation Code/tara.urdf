@@ -1,0 +1,95 @@
+<robot name="my_robot">
+  <!-- Base link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Position the base -->
+      <geometry>
+        <mesh filename="Base_centered.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Joint 1: Revolute joint in Z-axis -->
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_0"/>
+    <!-- Place the joint where the links connect (relative to base_link) -->
+    <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Adjust as necessary -->
+    <axis xyz="0 0 1"/> <!-- Rotation along Z-axis -->
+    <limit effort="100" velocity="1.0" lower="-3.14" upper="3.14"/>
+  </joint>
+
+  <!-- Link 0 -->
+  <link name="link_0">
+    <visual>
+      <!-- The origin should be relative to the joint, not global (relative to base_link) -->
+      <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Ensure this is correct -->
+      <geometry>
+        <mesh filename="Link1_centered.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <!-- Joint 2: Revolute joint in y-axis -->
+  <joint name="joint_2" type="revolute">
+    <parent link="link_0"/>
+    <child link="link_1"/>
+    <!-- Place the joint where the links connect (relative to base_link) -->
+    <origin xyz="0 0 0.73" rpy="0 0 0"/> <!-- Adjust as necessary -->
+    <axis xyz="0 1 0"/> <!-- Rotation along Y-axis -->
+    <limit effort="100" velocity="1.0" lower="0" upper="-3.14"/>
+  </joint>
+
+  <!-- Link 1 -->
+  <link name="link_1">
+    <visual>
+      <!-- The origin should be relative to the joint, not global (relative to base_link) -->
+      <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Ensure this is correct -->
+      <geometry>
+        <mesh filename="Link2_centered.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <!-- Joint 3: Revolute joint in y-axis -->
+  <joint name="joint_3" type="revolute">
+    <parent link="link_1"/>
+    <child link="link_2"/>7
+    <!-- Joint where the links connect (relative to base_link) -->
+    <origin xyz="0.90 0 0" rpy="0 0 0"/> <!-- Adjust as necessary -->
+    <axis xyz="0 1 0"/> <!-- Rotation along Y-axis -->
+    <limit effort="100" velocity="1.0" lower="0" upper="1.57"/>
+  </joint>
+
+  <!-- Link 2 -->
+  <link name="link_2">
+    <visual>
+      <!-- The origin should be relative to the joint, not global (relative to base_link) -->
+      <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Ensure this is correct -->
+      <geometry>
+        <mesh filename="Link3_centered.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <!-- Joint 4: Revolute joint in y-axis -->
+  <joint name="joint_4" type="revolute">
+    <parent link="link_2"/>
+    <child link="end_effector"/>
+    <!-- Joint where the links connect (relative to base_link) -->
+    <origin xyz="-0.83 0 0.35" rpy="0 0 0"/> <!-- Adjust as necessary -->
+    <axis xyz="0 1 0"/> <!-- Rotation along Y-axis -->
+    <limit effort="100" velocity="1.0" lower="-1.57" upper="1.57"/>
+  </joint>
+
+  <!-- End-Effector -->
+  <link name="end_effector">
+    <visual>
+      <!-- The origin should be relative to the joint, not global (relative to base_link) -->
+      <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Ensure this is correct -->
+      <geometry>
+        <mesh filename="EndEffector_centered.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
+
+
+ 
