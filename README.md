@@ -17,7 +17,7 @@ This repository contains:
    - Arduino code for troubleshooting
    - Jupyter Notebobks with the Python code to run simulations of the robot
 4. **Documentation**:
-   - Bill of materials (BOM)
+   - Bill of materials (BOM) https://docs.google.com/document/d/1PwCRcLvzc4oVpurYSVTbRW2TU2EedRhl2yPV-Ze2hmc/edit?usp=sharing
 
 ---
 
