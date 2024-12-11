@@ -2,6 +2,8 @@
 
 This repository includes the code, 3D printing files, and documentation to build the industrial robot arm named **T.A.R.A.**. This project aims to make robotics accessible by providing a low-cost and customizable solution for education, research, and small-scale industry applications.
 
+<img width="317" alt="Figure 12" src="https://github.com/user-attachments/assets/1d63093c-5e74-4239-9de0-4f86ffb40c9e">
+
 ---
 
 ## What's Included
@@ -39,3 +41,8 @@ To replicate this project, you’ll need the following:
    ```bash
    git clone https://github.com/Thayslm30/Three-D-Printed-Affordable-Robotic-Arm.git
  
+### Circuit Diagram
+![Figure 11](https://github.com/user-attachments/assets/9e1a0557-dbdc-4448-9370-accc07058d7d)
+
+### Demos
+https://drive.google.com/drive/u/1/folders/1L06COeyFpNktWuyYnfT8AG40fpObh4bi
